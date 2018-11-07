@@ -1,0 +1,51 @@
+print("="*40)
+print("Comparativo de Consumo de Combustível")
+print("="*40)
+
+Veiculos = []
+
+ListaConsumo = []
+
+QuantListros10km = []
+
+consumo10km = 0
+
+TabelaPrecos = []
+
+ValorGasolina = 0
+
+for i in range(1,6):
+  CadasVeiculo = str(input("Nome do veículo: "))
+  CadasConsumo = float(input("Km por litro: "))
+  print("")
+
+  Veiculos.append(CadasVeiculo)
+  ListaConsumo.append(CadasConsumo)
+
+  consumo10km = float(1000/CadasConsumo)
+  QuantListros10km.append(consumo10km)
+
+  ValorGasolina = float(consumo10km*3.5)
+  TabelaPrecos.append(ValorGasolina)
+
+print("="*60)
+print("Relatório Final:\n")
+print("VEÍCULO        KM/L         1000KM         PRECO")
+for i in range(5):
+  print("{} ------ {:.1f} ------ {:.1f} litros ----- R${:.2f}".format(Veiculos[i], ListaConsumo[i], QuantListros10km[i], TabelaPrecos[i]))
+print("="*60)
+print("")
+
+MenorGasto = min(QuantListros10km)
+
+Carroconsome = 0
+
+MelhorGasto = 0
+
+for j in range(len(QuantListros10km)):
+  Carroconsome = QuantListros10km[i] 
+
+  if Carroconsome == MenorGasto:
+    MelhorGasto = i
+
+print("O menor consumo é do {}".format(Veiculos[MelhorGasto]))

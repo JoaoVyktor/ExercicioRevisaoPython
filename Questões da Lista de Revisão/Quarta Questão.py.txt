@@ -1,0 +1,115 @@
+print("="*37)
+print("            MEGA PROMOÇÃO")
+print("="*37)
+print('''
+ABAIXO DE 5Kg
+
+Filé Duplo R$4,90
+Alcatra R$5,90
+Picanha R$6,90
+
+ACIMA DE 5Kg
+
+Filé Duplo R$5,80
+Alcatra R$6,80
+Picanha R$7,80
+''')
+#compras
+
+carne = str(input("tipo de carne: "))
+peso = float(input("digite o peso: "))
+print("")
+
+
+#Filé Duplo 5KG
+if(carne == 'File Duplo' and peso <= 5.0):
+  print("Tipo de carne: File Duplo\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*4.90
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))
+
+
+#Alcatra 5KG
+elif(carne == 'Alcatra' and peso <= 5.0):
+  print("Tipo de carne: Alcatra\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*5.90
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))
+
+#Picanha 5KG
+elif(carne == 'Picanha' and peso <= 5.0):
+  print("Tipo de carne: Picanha\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*6.90
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))
+
+#Filé Duplo acima 5KG
+elif(carne == 'File Duplo' and peso > 5.0):
+  print("Tipo de carne: File Duplo\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*5.80
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))
+
+#Alcatra acima 5KG
+elif(carne == 'Alcatra' and peso > 5.0):
+  print("Tipo de carne: Alcatra\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*6.80
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))
+
+
+
+#Picanha acima 5KG
+elif(carne == 'Picanha' and peso > 5.0):
+  print("Tipo de carne: Picanha\n")
+  print("quantidade: {}Kg\n".format(peso))
+  preco = peso*7.80
+  print("Preço: R${:.2f}\n".format(preco))
+  tp_pagamento = str(input("Forma de Pagamento: "))
+  print("")
+  if(tp_pagamento=="Cartao Tabajara"):
+    preco_desconto = preco*0.05
+    print("Valor do Desconto: R${:.2f}\n".format(preco_desconto))
+    print("Valor a pagar: R${:.2f}\n".format(preco-preco_desconto))
+  else:
+    print("Valor a pagar: R${:.2f}\n".format(preco))

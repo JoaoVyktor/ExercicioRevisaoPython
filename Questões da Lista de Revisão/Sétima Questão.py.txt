@@ -1,0 +1,25 @@
+L1 = []
+L2 = []
+
+for i in range(0, 10):
+  a = int(input())
+  L1.append(a)
+
+print("\nSai da primeira lista!\n")
+
+
+for j in range(0, 10):
+  b = int(input())
+  L2.append(b)
+
+print("Sai da segunda lista!")
+
+Vetor = []
+
+for s in range(10):
+  S1 = L1[s]
+  S2 = L2[s]
+  Vetor.append(S1)
+  Vetor.append(S2)
+
+print(Vetor)
