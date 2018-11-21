@@ -1,0 +1,30 @@
+class Stack:
+    
+    def __init__(self):
+        self.stack = []
+        self.soma = 0 
+        
+    def push(self,valor):
+        self.stack.append(valor)
+        
+    def pop(self):
+        if (not(self.isEmpty())):
+            self.stack.pop()
+            
+    def isEmpty(self):
+        return len(self.stack) == 0
+    
+    def lenght(self):
+        return len(stack.self)
+    
+    def peek(self):
+        return self.stack[-1]
+
+stack = Stack()
+for i in range(16):
+  if i % 3 == 0 :
+    stack.push(i)
+  elif i % 4 == 0 :
+    stack.pop()
+
+print(stack.stack) #Valores impressos 0, 9, 12, 15
