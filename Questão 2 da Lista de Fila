@@ -1,0 +1,16 @@
+class fila:
+  def __init__(self):
+    self.elementos = []
+
+  def Leght(self):
+    return len(self.elementos)
+
+  def isEmpty(self):
+    return len(self.elementos)==0
+  
+  def Enqueue(self, valor):
+    self.elementos.append(valor)
+
+  def Dequeue(self):
+    if(not(self.isEmpty)):
+      self.elementos.pop(0)
