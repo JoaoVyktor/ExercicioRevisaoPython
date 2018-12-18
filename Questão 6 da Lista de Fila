@@ -1,0 +1,36 @@
+class aeroporto:
+  def __init__(self):
+    self.pista_espera = []
+
+  #lista o número de aviões aguardando na fila de decolagem
+  def listar(self):
+    return (len(self.pista_espera))
+  
+  #adiciona uma aeronave a pista de espera
+  def adicionar_aeronave(self, valor):
+    self.pista_espera.append(valor)
+
+  def isEmpty(self):
+    return (len(self.pista_espera))==0
+  
+  #autorizar decolagem
+  def decolagem(self):
+    if(not(self.isEmpty())):
+      self.pista_espera.pop(0)
+
+
+
+fila = aeroporto()
+aeronave1 = input("Digite o modelo da aeronave:")
+fila.adicionar_aeronave(aeronave1)
+
+aeronave2 = input("\nDigite o modelo da aeronave:")
+fila.adicionar_aeronave(aeronave2)
+
+print("\nA primeira aeronave da pista de espera esta autorizada para a decolagem!\n")
+
+Aeronaves = fila.listar()
+
+print("\nO total de aeronaves aguardando na fila é de {} aeronave(s)\n".format(Aeronaves))
+
+print("\nCaracterísticas da primeira aeronave da pista de espera: {}\n".format(fila.pista_espera[0]))
