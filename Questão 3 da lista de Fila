@@ -1,0 +1,3 @@
+def Enqueue(self, valor):
+  if(len(self.elementos<20)):
+    self.elementos.append(valor)
