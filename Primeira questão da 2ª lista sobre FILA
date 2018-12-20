@@ -1,0 +1,57 @@
+class fila:
+  def __init__(self):
+    self.lista = []
+    
+  def enqueue(self, valor):
+    self.lista.append(valor)
+
+  def dequeue(self):
+    if(not(self.isEmpty())):
+      return self.lista.pop(0)
+
+  def isEmpty(self):
+    return len(self.lista)==0
+
+
+
+class Pilha():
+  def __init__(self):
+        self.elementos = []
+        self.maxima = 5
+
+  def lenght(self):
+        return len(self.elementos)
+
+  def isEmpyt(self):
+        return self.lenght()==0
+
+  def push(self, valor):
+     self.elementos.append(valor)
+
+  def pop(self):
+        # remover o último item.
+    if (not(self.isEmpyt())):
+      self.elementos.pop()
+
+varAUX = 0
+listaAUX = Pilha()
+F = fila()
+F.enqueue(1)
+F.enqueue(2)
+F.enqueue(3)
+for i in range(len(F.lista)):
+  varAUX = F.lista[0]
+  listaAUX.push(varAUX)
+  F.dequeue()
+print(listaAUX.elementos)
+print(F.lista)
+
+
+lista_correta = []
+varAUX2 = 0
+for i in range(len(listaAUX.elementos)):
+  varAUX2 = listaAUX.elementos[-1]
+  lista_correta.append(varAUX2)
+  listaAUX.pop()
+
+print(lista_correta)
